@@ -1,0 +1,89 @@
+@import "../../base/variables";
+@import "../../base/mixins";
+
+.contacts {
+  max-width: 100%;
+  background-image: url("../img/map.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+
+  &__wrapper {
+    max-width: $site-width-inner + 30;
+    margin: 0 auto;
+    padding: 115px 15px 70px 15px;
+    display: flex;
+    justify-content: flex-end;
+
+      @include screen-max-880 {
+        justify-content: center;
+      }
+
+  }
+  &__card {
+    max-width: 618px;
+    height: 518px;
+    padding: 70px 44px;
+    background-color: $white-bg;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include screen-max-570 {
+      height: 400px;
+      padding: 40px 25px;
+    }
+  }
+  &__number {
+    font-size: 28px;
+    font-weight: 700;
+    color: $black-font;
+
+      @include screen-max-570 {
+        font-size: 23px;
+      }
+
+  }
+  &__email {
+    font-size: 24px;
+    font-weight: 400;
+    color: $black-font;
+
+    @include screen-max-570 {
+      font-size: 20px;
+    }
+    span {
+      font-size: 12px;
+    }
+  }
+  &__address {
+    font-size: 24px;
+    font-weight: 400;
+    color: $black-font;
+
+    @include screen-max-570 {
+      font-size: 20px;
+    }
+    span {
+      font-size: 12px;
+    }
+  }
+  &__requisites {
+    font-size: 24px;
+    font-weight: 400;
+    color: $black-font;
+
+    @include screen-max-570 {
+      font-size: 20px;
+    }
+    span {
+      font-size: 12px;
+    }
+  }
+  &__br--display {
+    @include screen-max-392 {
+      display: none;
+    }
+  }
+
+}

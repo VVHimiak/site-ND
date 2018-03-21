@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ND design studio</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link href="img/logo.png" rel="shortcut icon" type="image/x-icon"/>
+</head>
+<body>
+
+
+<!-- HEADER -->
+<header class="header-default our-team-bg-img">
+    <div class="header-default__wrapper">
+        <div class="header-default__wrapper--content">
+            <div class="header-default__top">
+                <div class="header-default__top--menu-ico" id='header-ico' onclick="openNav()">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <a class="header-default__logo" href="#">
+                    <img src="img/logo.png" alt="ND design studio">
+                </a>
+                <nav class="header-default__nav" id="header-nav">
+                    <a href="javascript:void(0)" class="header-default__nav--closebtn" onclick="closeNav()">&times;</a>
+                    <div class="header-default__nav--top">
+                        <ul class="header-default__nav--top--list">
+                            <li class="header-default__nav--articles">
+                                <span class="header-default__dropdown">
+                                    <a href="#" class="dropdown__button">
+                                        Про нас
+                                    <i class="fa fa-angle-down"></i></a>
+                                    <ul class="header-default__dropdown--list">
+                                        <li><a href="#">Сучасний</a></li>
+                                        <li><a href="#">Класичний</a></li>
+                                        <li><a href="#">Лофт</a></li>
+                                    </ul>
+                                </span>
+                                <a href="#">статьи</a>
+                            </li>
+                            <li class="header-default__nav--languages"><a href="">rus</a><a class="active" href="">ua</a></li>
+                            <li class="header-default__nav--numbers"><a href="#"><i class="fa fa-phone header-default__nav--numbers-ico"></i>+38 073 00 12 112</a><a href="">+38 073 00 12 112</a></li>
+                            <li class="header-default__feedback header__feedback"><a href="#">Зворотній зв'язок</a></li>
+                        </ul>
+                    </div>
+                    <div class="header-default__nav--bottom">
+                        <ul class="header-default__nav--bottom--list">
+                            <li><a href="">дизайн інтерєру</a></li>
+                            <li>
+                                <span class="header-default__dropdown">
+                                    <a class="dropdown__button" href="#">портфоліо
+                                        <i class="fa fa-angle-down header-default__dropdown--arrow"></i></a>
+                                    <ul class="header-default__dropdown--list">
+                                        <li><a href="">Сучасний</a></li>
+                                        <li><a href="">Класичний</a></li>
+                                        <li><a href="">Лофт</a></li>
+                                    </ul>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="header-default__dropdown">
+                                    <a class="dropdown__button" href="#">ціни
+                                        <i class="fa fa-angle-down header-default__dropdown--arrow"></i></a>
+                                    <ul class="header-default__dropdown--list">
+                                        <li><a href="">Сучасний</a></li>
+                                        <li><a href="">Класичний</a></li>
+                                        <li><a href="">Лофт</a></li>
+                                    </ul>
+                                </span>
+
+                            </li>
+                            <li><a href="#">планування</a></li>
+                            <li><a href="">авторський нагляд</a></li>
+                            <li><a href="">ремонт квартир</a></li>
+                            <li>
+
+                                <span class="header-default__dropdown">
+                                    <a class="dropdown__button" href="#">
+                                        контакти
+                                        <i class="fa fa-angle-down header-default__dropdown--arrow"></i></a>
+                                    <ul class="header-default__dropdown--list">
+                                        <li><a href="">Сучасний</a></li>
+                                        <li><a href="">Класичний</a></li>
+                                        <li><a href="">Лофт</a></li>
+                                    </ul>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="header-default__content">
+
+                <h1 class="header-default__content--title">Наша команда</h1>
+                <p class="header-default__content--navigation"><a href="#">Головна</a> / <a href="#">Планування приміщень</a></p>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Window -->
+    <div class="modal_window">
+        <div class="content_window_md">
+            <div class="header_modal">
+                <h2>Зворотній зв'язок</h2>
+                <span class="button_hidden hidden_bt_modal">+</span>
+            </div>
+            <div class="content_modal">
+
+                <div class="form_block_contacts">
+                    <form>
+                        <p>Имя</p>
+                        <div class="input_padding">
+                            <input type="text" name="name" placeholder="Ваше имя" required >
+                        </div>
+                        <p>Телефон</p>
+                        <div class="input_padding">
+                            <input data-inputmask="'mask': '+3(999)-999-99-999'" type="text" id="phone" name="phone" lass="city"  placeholder="Укажите ваш телефон" required >
+                        </div>
+                        <p>Email</p>
+                        <div class="input_padding">
+                            <input type="email" name="email" placeholder="Укажите ваш email" required >
+                        </div>
+                        <p>Комментарии</p>
+                        <div class="input_padding">
+                            <textarea class="form-control" name="coments"></textarea>
+                        </div>
+                    </form>
+                </div><!-- form_block_contacts -->
+
+            </div>
+            <div class="footer_modal button_form">
+                <button class="hidden_bt_modal">Закрыть</button>
+                <button>Отправить</button>
+            </div>
+        </div>
+    </div>
+    </div>
+</header>
+
+<!-- SECTION OUR-TEAM -->
+<section class="our-team">
+    <span class="our-team__line"><img class="abso" src="img/orange-line.png" alt=""></span>
+    <div class="our-team__wrapper">
+        <div class="our-team__cards--wrapper">
+            <div class="our-team__card">
+                <img class="our-team__card--img" src="img/our-team-card.jpg" alt="">
+                    <h4 class="our-team__card--title">Lorem ipsum dolor sit amet</h4>
+                    <p class="our-team__card--text">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  </p>
+            </div>
+            <div class="our-team__card">
+                <img class="our-team__card--img" src="img/our-team-card.jpg" alt="">
+                    <h4 class="our-team__card--title">Lorem ipsum dolor sit amet</h4>
+                    <p class="our-team__card--text">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  </p>
+            </div>
+            <div class="our-team__card">
+                <img class="our-team__card--img" src="img/our-team-card.jpg" alt="">
+                    <h4 class="our-team__card--title">Lorem ipsum dolor sit amet</h4>
+                    <p class="our-team__card--text">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  </p>
+            </div>
+        </div>
+        <div class="our-team__form">
+            <h3 class="our-team__form--title">Залиште заявку</h3>
+            <input class="our-team__form--text" type="text" placeholder="Ваше ім'я">
+            <input data-inputmask="'mask': '+3(999)-999-99-999'" class="our-team__form--tel" type="tel" required placeholder="Ваш телефон">
+            <textarea class="our-team__form--message" name="" id="" required placeholder="Повідомлення"></textarea>
+            <input class="our-team__form--submit" type="submit" >
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer__wrapper">
+        <div class="footer__content--left">
+            <div class="footer__logo">
+                <a href="#"><img src="img/footer-logo.png" alt="ND design studio"></a>
+                <p class="footer__motto">нам можно доверять</p>
+            </div>
+            <div class="footer__about-us">
+                <h4 class="footer__about-us--title">Про нас</h4>
+                <ul class="footer__about-us--list">
+                    <li><a href="#">Наша команда</a></li>
+                    <li><a href="#">Партнери</a></li>
+                    <li><a href="#">Благодійність</a></li>
+                    <li><a href="#">Співпраця</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__content--right">
+            <ul class="footer__services">
+                <li><a href="#">Дизайн інтерєру</a></li>
+                <li><a href="#">Портфоліо</a></li>
+                <li><a href="#">Ціни</a></li>
+                <li><a href="#">Планування</a></li>
+                <li><a href="#">Авторський нагляд</a></li>
+                <li><a href="#">Ремонт квартир</a></li>
+                <li><a href="#">Контакти</a></li>
+            </ul>
+            <div class="footer__social">
+                <p class="footer__social--tel">+38 073 00 12 112</p>
+                <p class="footer__social--tel">+38 073 00 12 112</p>
+                <div class="footer__social--icons">
+                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-telegram" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/jquery.inputmask.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+@import "../../base/variables";
+@import "../../base/mixins";
+
+.result {
+  max-width: 100%;
+  margin: 0 auto;
+  background-image: url(../img/result-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+  background-size: cover;
+
+    &__wrapper {
+      max-width: $site-width-small;
+      margin: 0 auto;
+      padding: 71px 0 82px 0;
+        @include screen-max-928 {
+          padding-bottom: 62px;
+        }
+        @include screen-max-481 {
+          padding-top: 56px;
+          padding-bottom: 28px;
+        }
+    }
+    &__title {
+      @include title;
+    }
+    &__line {
+      @include line;
+    }
+    &__cards--wrapper {
+      display: flex;
+      justify-content: space-between;
+        @include screen-max-928 {
+          flex-direction: column;
+          align-items: center;
+        }
+    }
+    &__card {
+      max-width: 296px;
+      padding: 25px 20px;
+      text-align: center;
+      background-color: #fbfbfb;
+      color: $dark-font;
+      box-shadow: 0 12px 46px rgba(0, 0, 0, .1);
+        @include screen-max-928 {
+          margin-bottom: 20px;
+        }
+
+        &--title {
+          margin-bottom: 24px;
+          font-weight: 700;
+          font-size: 18px;
+        }
+        &--text {
+          font-weight: 400;
+          font-size: 16px;
+        }
+
+        span {
+          display: block;
+          width: 53px;
+          height: 53px;
+          margin: 0 auto 24px auto;
+          background-position: center center;
+          background-repeat: no-repeat;
+        }
+        &--1 {
+          background-image: url("../img/result-card-1-img.png");
+        }
+        &--2 {
+          background-image: url("../img/result-card-2-img.png");
+        }
+        &--3 {
+          background-image: url("../img/result-card-3-img.png");
+        }
+    }
+
+  .title__transfer {
+    @include screen-max-880 {
+      display: none;
+    }
+  }
+}

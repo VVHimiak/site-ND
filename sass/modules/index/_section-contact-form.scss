@@ -1,0 +1,127 @@
+@import "../../base/mixins";
+@import "../../base/variables";
+
+.contact-form {
+  max-width: 100%;
+  margin: 0 auto;
+  background-image: url(../img/map.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+  background-size: cover;
+
+    &__wrapper {
+      display: flex;
+      justify-content: flex-start;
+      max-width: $site-width-small;
+      margin: 0 auto;
+      padding: 120px 0 75px 0;
+        @include screen-max-1170 {
+          justify-content: center;
+
+        }
+        @include screen-max-880 {
+          padding: 80px 0 80px 0;
+        }
+        @include screen-max-481 {
+        padding-top: 75px;
+        padding-bottom: 75px;
+      }
+    }
+    &__content {
+      max-width: 618px;
+      padding: 72px 61px 67px 61px;
+      background-color: $white-bg;
+        @include screen-max-880 {
+          padding: 40px 32px;
+        }
+        @include screen-max-348 {
+          padding: 15px 10px;
+        }
+
+        &--wrapper {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 18px;
+
+            @include screen-max-570 {
+              flex-direction: column;
+              align-items: center;
+            }
+        }
+        &--name {
+          @include screen-max-570 {
+            margin-bottom: 20px;
+
+          }
+        }
+        &--name,
+        &--tel {
+          width: 237px;
+          padding: 15px 21px;
+          font-family: Tahoma, sans-serif;
+          font-weight: 400;
+          font-size: 16px;
+          color: $dark-font;
+          text-align: left;
+          border: 2px solid $black-bg;
+          border-radius: 4px;
+
+          @include screen-max-570 {
+            width: 100%;
+          }
+        }
+        &--text {
+          resize: none;
+          box-sizing: border-box;
+          font-family: Tahoma, sans-serif;
+          width: 100%;
+          display: block;
+          margin-bottom: 26px;
+          padding: 14px;
+          font-weight: 400;
+          font-size: 16px;
+          color: $dark-font;
+          text-align: center;
+          border: 2px solid $black-bg;
+          border-radius: 4px;
+          height: 139px;
+        }
+        &--submit {
+          display: block;
+          margin: 0 auto;
+          width: 267px;
+          height: 48px;
+          color: $white-font;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 44px;
+          background-color: $orange-font;
+          border: 2px solid $orange-bg;
+          border-radius: 4px;
+          cursor: pointer;
+          @include transition;
+          @include screen-max-570 {
+            width: 100%;
+          }
+
+            &:hover {
+              border-color: $black-font;
+              background-color: transparent;
+              color: $black-font;
+            }
+        }
+    }
+    &__title {
+      margin-bottom: 42px;
+      font-weight: 700;
+      font-size: 28px;
+      color: $black-font;
+      text-align: center;
+
+      @include screen-max-481 {
+        font-size: 24px;
+        margin-bottom: 35px;
+      }
+    }
+}

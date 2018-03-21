@@ -1,0 +1,351 @@
+@import "../../base/variables";
+@import "../../base/mixins";
+
+.our-work {
+  max-width: $site-width-inner;
+  margin: 0 auto;
+
+    &__wrapper {
+      padding: 71px 0 43px 0;
+        @include screen-max-481 {
+          padding-top: 56px;
+          padding-bottom: 28px;
+        }
+    }
+    &__title {
+      @include title;
+    }
+    &__line {
+      @include line;
+      margin-bottom: 70px;
+
+        @include screen-max-481 {
+          margin-bottom: 25px;
+        }
+    }
+    &__images--wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+    &__image {
+      overflow: hidden;
+      border: none;
+      max-height: 400px;
+
+      figure {
+        position: relative;
+        overflow: hidden;
+        //margin: 10px 1%;
+        /*min-width: 320px;
+        max-width: 480px;*/
+        max-height: 400px;
+        /*width: 48%;*/
+        border: none;
+        height: 100%;
+        background: #3085a3;
+        text-align: center;
+        cursor: pointer;
+      }
+      figure img {
+        position: relative;
+        display: block;
+        min-height: 100%;
+        max-width: 100%;
+        opacity: 0.8;
+      }
+      figure figcaption {
+        padding: 2em;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 1.25em;
+        backface-visibility: hidden;
+      }
+      figure figcaption::before,
+      figure figcaption::after {
+        pointer-events: none;
+      }
+      figure figcaption,
+      figure figcaption > a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      figure figcaption > a {
+        z-index: 1000;
+        text-indent: 200%;
+        white-space: nowrap;
+        font-size: 0;
+        opacity: 0;
+      }
+      figure h2 {
+        word-spacing: -0.15em;
+        font-weight: 300;
+      }
+      figure h2 span {
+        font-weight: 800;
+        text-align: center;
+      }
+      figure h2,
+      figure p {
+        margin: 0;
+      }
+      figure p {
+        letter-spacing: 1px;
+        font-size: 68.5%;
+      }
+      figure.effect-apollo {
+        background: #3498db;
+      }
+
+      figure.effect-apollo img {
+        opacity: 0.95;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: scale3d(1.05,1.05,1);
+        transform: scale3d(1.05,1.05,1);
+      }
+
+      figure.effect-apollo figcaption::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255,255,255,0.5);
+        content: '';
+        -webkit-transition: -webkit-transform 0.6s;
+        transition: transform 0.6s;
+        -webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+        transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+      }
+
+      figure.effect-apollo p {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        margin: 3em;
+        padding: 0 1em;
+        max-width: 160px;
+        border-right: 4px solid #fff;
+        text-align: right;
+        opacity: 0;
+        -webkit-transition: opacity 0.35s;
+        transition: opacity 0.35s;
+
+          @include screen-max-380 {
+            text-align: center;
+            max-width: 240px;
+          }
+      }
+
+      figure.effect-apollo h2 {
+        text-align: center;
+      }
+
+      figure.effect-apollo:hover img {
+        opacity: 0.6;
+        -webkit-transform: scale3d(1,1,1);
+        transform: scale3d(1,1,1);
+      }
+
+      figure.effect-apollo:hover figcaption::before {
+        -webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
+        transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
+      }
+
+      figure.effect-apollo:hover p {
+        opacity: 1;
+        -webkit-transition-delay: 0.1s;
+        transition-delay: 0.1s;
+      }
+
+    }
+    &__links {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 38px;
+      padding-left: 70px;
+      padding-right: 70px;
+      text-align: center;
+
+        @include screen-max-438 {
+          flex-direction: column;
+        }
+
+        &--wrapper {
+          width: 100px;
+          padding-left: 10px;
+          padding-right: 10px;
+          display: block;
+          font-weight: 400;
+          font-size: 20px;
+          color: $black-font;
+          text-decoration: none;
+          text-transform: capitalize;
+          @include transition;
+
+            @include screen-max-980 {
+              margin: 20px;
+            }
+          @include screen-max-438 {
+            margin-top: 15px;
+            margin-bottom: 15px;
+          }
+
+            &:hover {
+              color: $orange-font;
+            }
+        }
+        &--image {
+          margin: 0 auto;
+          width: 58px;
+          height: 58px;
+          background-position: center center;
+          background-repeat: no-repeat;
+
+            div {
+              background-position: center center;
+              background-repeat: no-repeat;
+            }
+        }
+    }
+    &__button {
+      text-align: center;
+
+        a {
+          display: inline-block;
+          text-decoration: none;
+          font-weight: 400;
+          font-size: 20px;
+          color: black;
+          padding: 20px 70px;
+          border: 2px solid $black-bg;
+          border-radius: 5px;
+          @include transition;
+
+          @include screen-max-870 {
+            width: 280px;
+            padding-left: 0;
+            padding-right: 0;
+          }
+
+            &:hover {
+              background-color: $black-bg;
+              color: $white-font;
+            }
+        }
+
+    }
+    &__living-room {
+
+        div {
+          background-image: url("../img/our-work-living-room-black.png");
+          @include transition;
+        }
+        &:hover {
+
+          div {
+            background-image: url("../img/our-work-living-room-orange.png");
+          }
+        }
+    }
+
+    &__bathroom {
+
+        div {
+          background-image: url("../img/our-work-bathroom-black.png");
+          @include transition;
+        }
+        &:hover {
+
+            div {
+              background-image: url("../img/our-work-bathroom-orange.png");
+            }
+        }
+
+    }
+    &__kitchen {
+
+        div {
+          background-image: url("../img/our-work-kitchen-black.png");
+          @include transition;
+        }
+        &:hover {
+
+          div {
+            background-image: url("../img/our-work-kitchen-orange.png");
+          }
+        }
+    }
+    &__bedroom {
+
+        div {
+          background-image: url("../img/our-work-bedroom-black.png");
+          @include transition;
+        }
+        &:hover {
+
+          div {
+            background-image: url("../img/our-work-bedroom-orange.png");
+          }
+        }
+    }
+    &__corridor {
+
+        div {
+          background-image: url("../img/our-work-corridor-black.png");
+          @include transition;
+        }
+        &:hover {
+
+          div {
+            background-image: url("../img/our-work-corridor-orange.png");
+          }
+        }
+    }
+    &__cabinet {
+
+        div {
+          background-image: url("../img/our-work-cabinet-black.png");
+          @include transition;
+        }
+        &:hover {
+
+          div {
+            background-image: url("../img/our-work-cabinet-orange.png");
+          }
+        }
+    }
+    &__loggia {
+
+        div {
+          background-image: url("../img/our-work-loggia-black.png");
+          @include transition;
+        }
+        &:hover {
+
+          div {
+            background-image: url("../img/our-work-loggia-orange.png");
+          }
+        }
+    }
+    &__office {
+
+        div {
+          background-image: url("../img/our-work-office-black.png");
+          @include transition;
+        }
+        &:hover {
+
+         div {
+            background-image: url("../img/our-work-office-orange.png");
+          }
+        }
+    }
+}

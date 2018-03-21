@@ -1,0 +1,321 @@
+@import "../../base/mixins";
+@import "../../base/variables";
+
+.repair-price {
+  max-width: $site-width-small + 30;
+  margin: 0 auto;
+  padding: 71px 0 81px 0;
+    @include screen-max-530 {
+      padding-top: 45px;
+      padding-bottom: 20px;
+    }
+
+    &__title {
+      @include title;
+    }
+    &__line {
+      @include line;
+    }
+    &__content {
+      max-width: 100%;
+      padding-top: 36px;
+      padding-bottom: 33px;
+      background-color: $white-bg;
+      box-shadow: 0 12px 46px rgba(0, 0, 0, .1);
+
+      @include screen-max-530 {
+        padding-top: 15px;
+      }
+
+        &--pagination {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 34px;
+        }
+
+        &--number {
+          display: flex;
+          justify-content: center;
+          font-size: 24px;
+          line-height: 48px;
+          color: $black-font;
+          background-color: $white-bg;
+          text-align: center;
+
+          .line {
+            align-self: center;
+            display: block;
+            width: 90px;
+            height: 2px;
+            background-color: $black-bg;
+
+            @include screen-max-530 {
+              width: 25px;
+            }
+            @include screen-max-360 {
+              width: 15px;
+            }
+          }
+          .circle {
+            display: block;
+            width: 52px;
+            height: 52px;
+            border: 2px solid $black-bg;
+            border-radius: 50%;
+            @include transition;
+          }
+            &.is-active .circle{
+              color: $white-font;
+              background-color: $black-bg;
+            }
+
+        }
+
+    }
+
+    form {
+      max-width: 534px;
+      margin: 0 auto;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+}
+
+.step-area {
+  display: none;
+  height: 225px;
+
+  @include screen-max-544 {
+   height: auto;
+  }
+
+    &__result {
+      font-weight: 700;
+      font-family: Tahoma;
+      text-decoration: underline;
+
+        &--wrapper {
+          height: 120px;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        &-name {
+          width: 237px;
+          height: 50px;
+          border: 2px solid $black-bg;
+          border-radius: 10px;
+          margin-bottom: 15px;
+          padding-left: 10px;
+        }
+        &-tel {
+          width: 237px;
+          height: 50px;
+          border: 2px solid $black-bg;
+          border-radius: 10px;
+          margin-bottom: 15px;
+          padding-left: 10px;
+        }
+    }
+}
+
+.step-area.visible {
+  display: block;
+}
+
+.step-area__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include screen-max-544 {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.step-area__title {
+  margin-bottom: 23px;
+  font-size: 24px;
+  font-weight: 700;
+  color: $black-font;
+  text-align: center;
+}
+.step-control {
+  position: relative;
+  width: 237px;
+  height: 50px;
+  border: 2px solid $black-bg;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.step-control .btn {
+  width: 100%;
+  display: block;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  color: $black-font;
+  text-transform: capitalize;
+  border-radius: 4px;
+  @include transition;
+}
+
+.step-control input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  opacity: 0;
+
+  cursor: pointer;
+}
+.step-control input:checked + .btn {
+  background: #000;
+  color: $white-font;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+.buttons__wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 430px;
+  margin: 0 auto;
+
+    @include screen-max-482 {
+      width: 310px;
+    }
+    @include screen-max-360 {
+      justify-content: space-around;
+      width: 280px;
+    }
+
+    button {
+      width: 200px;
+      height: 48px;
+      background-color: $orange-bg;
+      border: none;
+      cursor: pointer;
+      color: $white-font;
+      font-size: 16px;
+      font-family: Tahoma;
+      border-radius: 8px;
+      &:focus:not(:active)::after {
+        animation: ripple .3s ease-out;
+      }
+
+      @include screen-max-482 {
+        width: 140px;
+      }
+      @include screen-max-360 {
+        width: 134px;
+      }
+    }
+}
+
+
+/* CHECKBOX */
+.dismantling {
+  width: 15px;
+  height: 15px;
+  background-color: transparent;
+  border: 1px solid $gray-font;
+  position: relative;
+
+
+    &__wrapper {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 27px;
+
+      @include screen-max-482 {
+        justify-content: center;
+      }
+
+      &>label {
+        padding-left: 15px;
+        font-weight: 400;
+        font-size: 16px;
+        color: $dark-font;
+        cursor: pointer;
+      }
+    }
+  label {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    &:after {
+      content: '';
+      width: 7px;
+      height: 5px;
+      position: absolute;
+      top: 1px;
+      left: 1px;
+      border: 3px solid $black-bg;
+      border-top: none;
+      border-right: none;
+      background: transparent;
+      opacity: 0;
+      transform: rotate(-45deg);
+    }
+    &:hover::after {
+      opacity: 0.5;
+    }
+  }
+  input[type=checkbox] {
+    visibility: hidden;
+    &:checked + label:after {
+      opacity: 1;
+    }
+  }
+}
+
+.button{
+  position: relative;
+  overflow: hidden;
+}
+
+.button:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, .5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%);
+  transform-origin: 50% 50%;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 1;
+  }
+  20% {
+    transform: scale(25, 25);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(40, 40);
+  }
+}
+
+

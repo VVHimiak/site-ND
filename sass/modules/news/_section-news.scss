@@ -1,0 +1,148 @@
+@import "../../base/variables";
+@import "../../base/mixins";
+
+.news {
+  max-width: $site-width-inner + 30;
+  margin: 0 auto;
+  padding: 46px 15px;
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+
+        @include screen-max-1460 {
+          flex-direction: column;
+          align-items: center;
+        }
+    }
+    &__line {
+      @include line;
+    }
+    &__text {
+      display: flex;
+      flex-direction: column;
+      max-width: 1000px;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 25px;
+      color: $gray-font;
+
+      @include screen-max-1460 {
+        margin-bottom: 20px;
+      }
+
+
+        &--wrapper {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          @include screen-max-998 {
+            order: 2;
+          }
+
+        }
+        &--top {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 20px;
+
+
+          @include screen-max-998 {
+            flex-direction: column;
+            align-items: center;
+          }
+        }
+        &--img {
+          @include screen-max-998 {
+            order: 1;
+            margin-bottom: 20px;
+          }
+        }
+
+    }
+    &__form {
+      width: 382px;
+      height: 436px;
+      padding: 30px 62px;
+      text-align: center;
+      background-color: $white-font;
+      box-shadow: 0 12px 46px rgba(0, 0, 0, .2);
+
+        @include screen-max-410 {
+          padding-left: 30px;
+          padding-right: 30px;
+          width: 100%;
+        }
+
+        &--title {
+          margin-bottom: 23px;
+          font-weight: 700;
+          font-size: 25px;
+          color: $black-font;
+        }
+        &--text {
+          width: 100%;
+          height: 47px;
+          margin-bottom: 15px;
+          font-family: Tahoma, sans-serif;
+          color: $black-font;
+          font-size: 14px;
+          line-height: 43px;
+          text-align: center;
+          border: 2px solid #dbdbdb;
+          border-radius: 8px;
+        }
+        &--tel {
+          width: 100%;
+          height: 47px;
+          margin-bottom: 15px;
+          font-family: Tahoma, sans-serif;
+          color: $black-font;
+          font-size: 14px;
+          line-height: 43px;
+          text-align: center;
+          border: 2px solid #dbdbdb;
+          border-radius: 8px;
+        }
+        &--message {
+          max-width: 100%;
+          width: 100%;
+          max-height: 132px;
+          height: 132px;
+          margin-bottom: 25px;
+          color: $black-font;
+          font-family: Tahoma, sans-serif;
+          font-size: 14px;
+          text-align: center;
+          border: 2px solid #dbdbdb;
+          border-radius: 8px;
+        }
+        &--submit {
+          width: 100%;
+          display: block;
+          height: 48px;
+          color: $white-font;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 44px;
+          background-color: $orange-font;
+          border: 2px solid $orange-bg;
+          border-radius: 8px;
+          cursor: pointer;
+          @include transition;
+
+          &:hover {
+            border-color: $black-font;
+            background-color: transparent;
+            color: $black-font;
+          }
+
+        }
+    }
+
+
+
+
+
+}

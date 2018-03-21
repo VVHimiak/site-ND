@@ -1,0 +1,73 @@
+@import "../../base/variables";
+@import "../../base/mixins";
+
+.flat-design {
+  max-width: 100%;
+  margin: 0 auto;
+  background-image: url(../img/flat-design-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+  background-size: cover;
+
+    &__wrapper {
+      max-width: $site-width-small + 30;
+      margin: 0 auto;
+      padding: 71px 0 43px 0;
+        @include screen-max-1015 {
+          padding-bottom: 0;
+        }
+        @include screen-max-481 {
+          padding-top: 35px;
+        }
+    }
+    &__title {
+        @include title;
+    }
+    &__line {
+        @include line;
+    }
+    &__content {
+      display: flex;
+      flex-wrap: wrap;
+        @include screen-max-1015 {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        &--text {
+          width: 50%;
+          padding: 0 15px;
+          margin-bottom: 59px;
+            @include screen-max-1015 {
+              width: 100%;
+              margin-bottom: 40px;
+            }
+
+        }
+        &--title {
+          font-weight: 700;
+          font-size: 15px;
+          line-height: 25px;
+          color: $black-font;
+          @include screen-max-1015 {
+            text-align: center;
+          }
+
+        }
+        &--description {
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 25px;
+          color: $black-font;
+            @include screen-max-1015 {
+              text-indent: 15px;
+            }
+        }
+    }
+    .title__transfer {
+      @include screen-max-880 {
+        display: none;
+      }
+    }
+}

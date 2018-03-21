@@ -1,0 +1,183 @@
+@import "../../base/variables";
+@import "../../base/mixins";
+
+  .interior {
+    max-width: 100%;
+    margin: 0 auto;
+    background-image: url(../img/interior-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    background-size: cover;
+
+    &__wrapper {
+      max-width: $site-width-small + 30;
+      margin: 0 auto;
+      padding: 71px 0 43px 0;
+      @include screen-max-481 {
+        padding-top: 56px;
+        padding-bottom: 28px;
+      }
+    }
+    &__title {
+      @include title;
+    }
+    &__line {
+      @include line;
+    }
+    &__text {
+      display: flex;
+      justify-content: space-between;
+      max-width: $site-width-small + 30;
+      margin-bottom: 39px;
+      padding-left: 15px;
+      padding-right: 15px;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 25px;
+      color: $gray-font;
+      @include screen-max-880 {
+        flex-direction: column;
+        align-items: center;
+
+      }
+      @include screen-max-481 {
+        margin-bottom: 28px;
+      }
+
+      &--left {
+        padding-right: 17px;
+        @include screen-max-880 {
+          padding-right: 0;
+        }
+      }
+      &--right {
+        padding-left: 17px;
+        @include screen-max-880 {
+          padding-left: 0;
+        }
+      }
+    }
+    &__process {
+      max-width: $site-width-small;
+      padding: 28px 80px;
+      margin: 0 auto;
+      background-color: $white-bg;
+      box-shadow: 0 12px 46px rgba(0, 0, 0, .1);
+      @include screen-max-1170 {
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 8px;
+      }
+
+      &--title {
+        margin-bottom: 34px;
+        font-weight: 700;
+        font-size: 24px;
+        color: $black-font;
+        text-align: center;
+      }
+      &--content {
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+        @include screen-max-1170 {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      }
+      &--card {
+        max-width: 148px;
+        @include screen-max-1170 {
+          margin-bottom: 20px;
+          margin-left: 15px;
+          margin-right: 15px;
+        }
+
+      }
+      &--circle-1,
+      &--circle-2,
+      &--circle-3,
+      &--circle-4,
+      &--circle-5 {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 16px auto;
+        background-color: $black-bg;
+        border-radius: 50%;
+        cursor: pointer;
+        background-repeat: no-repeat;
+        background-position: center center;
+        @include transition;
+
+          &:hover {
+            transform: scale(1.2);
+            box-shadow: 0 0 90px rgba(255,155,36, .8);
+          }
+        }
+        &--circle-1 {
+          background-image: url("../img/interior-circle-1.png");
+          @include transition;
+
+            &:hover {
+              background-image: url("../img/interior-circle-1-orange.png");
+            }
+        }
+        &--circle-2 {
+          background-image: url("../img/interior-circle-2.png");
+
+          &:hover {
+            background-image: url("../img/interior-circle-2-orange.png");
+          }
+        }
+        &--circle-3 {
+          background-image: url("../img/interior-circle-3.png");
+
+          &:hover {
+            background-image: url("../img/interior-circle-3-orange.png");
+          }
+        }
+        &--circle-4 {
+          background-image: url("../img/interior-circle-4.png");
+
+          &:hover {
+            background-image: url("../img/interior-circle-4-orange.png");
+          }
+        }
+        &--circle-5 {
+          background-image: url("../img/interior-circle-5.png");
+
+          &:hover {
+            background-image: url("../img/interior-circle-5-orange.png");
+          }
+        }
+        &--description {
+          font-weight: 400;
+          font-size: 16px;
+          color: $dark-font;
+        }
+        &--arrow {
+          margin-top: 50px;
+          background-image: url("../img/interior-arrow.png");
+          background-position: center center;
+          background-repeat: no-repeat;
+          height: 20px;
+          width: 66px;
+
+          @include screen-max-1170 {
+            display: none;
+          }
+        }
+    }
+
+  }
+.title__transfer {
+  @include screen-max-880 {
+    display: none;
+  }
+}
+
+
+$color-primary: #4CAF50;
+$color-primary-light: #66BB6A;
+$color-text-light: snow;

@@ -1,0 +1,136 @@
+@import "../../base/variables";
+@import "../../base/mixins";
+
+.articles {
+  width: 100%;
+  background-color: #f6f6f6;
+  padding-top: 46px;
+
+  &__wrapper {
+    max-width: $site-width-inner + 30;
+    margin: 0 auto;
+    padding: 16px 15px 16px 15px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+      @include screen-max-1460 {
+        flex-direction: column;
+        align-items: center;
+      }
+
+
+  }
+  &__cards--wrapper {
+    max-width: 998px;
+  }
+  &__card {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 29px;
+
+      @include screen-max-770 {
+        flex-direction: column;
+        align-items: center;
+        background-color: $white-bg;
+        padding-top: 20px;
+      }
+
+      &--text {
+        padding-left: 27px;
+        padding-right: 20px;
+        padding-top: 21px;
+        padding-bottom: 30px;
+        background-color: $white-bg;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+          h4 {
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 25px;
+            color: $black-font;
+
+            @include screen-max-770 {
+              text-align: center;
+            }
+
+          }
+          p {
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 25px;
+            color: $gray-font;
+          }
+
+          a {
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 25px;
+            color: $orange-bg;
+            text-decoration: none;
+              @include transition;
+              @include screen-max-770 {
+                text-align: center;
+              }
+
+              &:hover {
+                text-decoration: underline;
+                color: $black-bg;
+              }
+
+          }
+      }
+      &--img {
+
+        @include screen-max-770 {
+          width: 70%;
+          height: 215px;
+          object-fit: cover;
+        }
+      }
+  }
+
+  &__line {
+    @include line;
+  }
+  @include form;
+  &__pagination {
+    text-align: center;
+
+    @include screen-max-1460 {
+      margin-bottom: 25px;
+    }
+
+      i {
+        font-size: 23px;
+        color: $black-font;
+        line-height: 23px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      i.active {
+        color: $gray-font;
+      }
+    a {
+      display: inline-block;
+      margin-left: 2px;
+      margin-right: 2px;
+      width: 25px;
+      height: 25px;
+      line-height: 23px;
+      text-decoration: none;
+      text-align: center;
+      color: $black-font;
+      border: 1px solid $black-font;
+      border-radius: 35%;
+    }
+    a.active {
+      color: #fff;
+      border-color: $orange-bg;
+      background-color: $orange-bg;
+    }
+  }
+}

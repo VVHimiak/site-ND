@@ -1,0 +1,84 @@
+@import "../../base/variables";
+@import "../../base/mixins";
+
+
+.live-message {
+  max-width: 100%;
+  background-color: $white-bg;
+  margin: 0 auto;
+
+  &__wrapper {
+    max-width: $site-width-inner + 30;
+    margin: 0 auto;
+    padding: 50px 15px 50px 15px;
+
+  }
+  &__title {
+    margin-bottom: 42px;
+    font-weight: 700;
+    font-size: 28px;
+
+    @include screen-max-1480 {
+      text-align: center;
+    }
+    @include screen-max-392 {
+      font-size: 26px;
+      margin-bottom: 35px;
+    }
+  }
+  &__form {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+      @include screen-max-1480 {
+        flex-direction: column;
+        align-items: center;
+      }
+  }
+  &__input {
+    width: 323px;
+    height: 50px;
+    padding-left: 22px;
+    font-weight: 400;
+    font-size: 16px;
+    border: 2px solid #000;
+    border-radius: 6px;
+
+    @include screen-max-1480 {
+      margin-bottom: 20px;
+    }
+    @include screen-max-392 {
+      width: 100%;
+    }
+
+  }
+  &__submit {
+    width: 323px;
+    height: 50px;
+    color: $white-bg;
+    font-weight: 700;
+    font-size: 16px;
+    border: 2px solid $orange-bg;
+    background-color: $orange-bg;
+    border-radius: 6px;
+    cursor: pointer;
+    @include transition;
+
+      &:hover {
+        border: 2px solid #000;
+        background-color: transparent;
+        color: #000;
+      }
+      @include screen-max-392 {
+        width: 100%;
+      }
+  }
+  &__br--display {
+
+      @include screen-max-553 {
+        display: none;
+      }
+  }
+
+}

@@ -1,0 +1,67 @@
+@import "../../base/variables";
+@import "../../base/mixins";
+
+
+
+.price-interest {
+  max-width: 100%;
+  background-color: #f79623;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 51px 15px 55px 15px;
+
+      @include screen-max-900 {
+        flex-direction: column;
+        align-items: center;
+      }
+  }
+  &__description {
+
+    @include screen-max-900 {
+      text-align: center;
+    }
+
+      h2 {
+        color: $white-font;
+        font-weight: 700;
+        font-size: 40px;
+      }
+      p {
+        color: $white-font;
+        font-weight: 400;
+        font-size: 24px;
+      }
+  }
+  &__arrow {
+    @include screen-max-900 {
+      transform: rotate(55deg) translateY(30px);
+      padding-top: 25px;
+      padding-bottom: 45px;
+    }
+  }
+  &__button {
+    display: block;
+    width: 304px;
+    height: 61px;
+    color: $white-font;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 57px;
+    background-color: $black-bg;
+    border: 2px solid $white-bg;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    @include transition;
+
+      &:hover {
+        background-color: transparent;
+      }
+
+  }
+
+}

@@ -1,0 +1,155 @@
+@import "../base/variables";
+@import "../base/mixins";
+
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+
+#our_work {
+	padding-bottom: 50px;
+
+	.figur_image {
+		padding-top: 46px;
+	}
+
+	.figur_line {
+		@include line;
+	}
+
+	.swiper-wrapper {
+		padding-bottom: 100px;
+	}
+	.swiper-container {
+		z-index: 1;
+	}
+	.container_our_work {
+		max-width: 1470px;
+		padding: 0 15px;
+		margin: 0 auto;
+	}
+	.text_cn_slider {
+		font-size: 15px;
+		line-height: 25px;
+		color: #71777d;
+		margin-top: 0;
+	}
+	.slider_our_wr {
+		display: flex;
+
+		@include screen-max-1480 {
+			flex-direction: column;
+		}
+
+	}
+	.big_image {
+		flex-basis: 1240px;
+		img {
+			height: 750px;
+			width: 100%;
+			object-fit: cover;
+
+			@include screen-max-1480 {
+				height: auto;
+				min-height: 400px;
+				max-height: 500px;
+			}
+			@include screen-max-482 {
+				min-height: 300px;
+				max-height: 400px;
+			}
+			@include screen-max-392 {
+				min-height: 270px;
+				max-height: 300px;
+			}
+		}
+		@include screen-max-1480 {
+			flex-basis: auto;
+		}
+	}
+	.min_image {
+		flex-basis: 180px;
+		max-width: 100%;
+		margin-left: 20px;
+		overflow-y: auto;
+		max-height: 750px;
+		@include screen-max-1480 {
+			display: flex;
+			overflow-y: hidden;
+			margin-left: 0;
+			justify-content: space-between;
+			flex-basis: auto;
+		}
+
+	}
+
+	.image_block {
+		margin-bottom: 10px;
+		cursor: pointer;
+		img {
+			width: 180px;
+			height: 135px;
+			@include screen-max-482 {
+				height: 110px;
+			}
+		}
+		@include screen-max-1480 {
+			min-width: 180px;
+			margin-bottom: 0;
+			max-width: 300px;
+			object-fit: cover;
+		}
+
+
+	}
+	.min_image_active {
+		position: relative;
+	}
+	.min_image_active:after {
+		content: " ";
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		top: 50%;
+		background-color: rgba(255, 255, 255, 0.61);
+	}
+
+	.swiper-button-next,
+	.swiper-button-prev {
+		background-image: none;
+		top: auto;
+		bottom: 20px;
+		border: 1px solid #010102;
+		width: 269px;
+		height: 50px;
+		box-sizing: border-box;
+		text-align: center;
+		line-height: 48px;
+		border-radius: 8px;
+
+		@include screen-max-620 {
+			width: 200px;
+		}
+		@include screen-max-481 {
+			width: 180px;
+		}
+		@include screen-max-438 {
+			width: 150px;
+			font-size: 14px;
+		}
+		@include screen-max-380 {
+			width: 140px;
+			height: 40px;
+			line-height: 38px;
+			font-size: 13px;
+		}
+		@include screen-max-360 {
+			width: 130px;
+			font-size: 13px;
+		}
+	}
+}
+
